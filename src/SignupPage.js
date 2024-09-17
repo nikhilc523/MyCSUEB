@@ -14,7 +14,7 @@ const SignupPage = () => {
     setIsSigningUp(true);
 
     try {
-      const response = await fetch('http://localhost:5001/signup', {
+      const response = await fetch('https://mycsueb-backend.onrender.com/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
