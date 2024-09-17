@@ -1,38 +1,281 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+/* General Navbar Styling */
+/* General Navbar Styling */
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  background-color: #2e2e2e;
+  padding: 10px 20px;
+  color: white;
+  height: 50px;
+}
+
+/* Left section with MYCSUEB Logo and MyHelp link */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left .mycsueb-logo {
+  height: 40px;
+  margin-right: 15px; /* Spacing between the logo and MyHelp link */
+}
+
+/* MyHelp Link */
+.navbar-left .myhelp-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar-left .myhelp-link:hover {
+  text-decoration: underline;
+}
+
+/* Right section with Cal State East Bay Logo */
+.navbar-right .east-bay-logo {
+  height: 40px;
+}
+
+/* Main content layout */
+/* General styles for card layout */
+.main-content {
+  display: flex;
+  justify-content: space-around; /* Adjusts the spacing between the cards */
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.sign-in, .students, .academic-advising {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 30%; /* Adjust width as needed */
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+/* Optional hover effect for cards */
+.sign-in:hover, .students:hover, .academic-advising:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Styles for the Sign In button */
+.sign-in-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Link styles */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Additional styles for academic advising section */
+.academic-advising .advising-info {
+  background-color: #ffe6e6;
+  padding: 10px;
+  border-radius: 4px;
+  color: #cc0000;
+}
+.sign-in, .students, .academic-advising {
+  background: linear-gradient(to bottom, #d0d0d0 20%, white 20%);
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 30%;
+  margin: 10px;
+  box-sizing: border-box;
+  position: relative;
+  font-family: "Whitney Bold", Helvetica, Arial, sans-serif;
+}
+
+.sign-in::before, .students::before, .academic-advising::before {
+  content: '';
+  display: block;
+  height: 20%;
+  background-color: #d0d0d0; /* Grey color */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  z-index: -1;
+}
+
+.sign-in h3, .students h3, .academic-advising h3 {
+  position: relative;
+  margin-top: 0; /* Remove default margin */
+  font-weight: bold;
+  font-family: "Whitney Bold", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+.students ul {
+  margin-top: 20%; /* Ensures bullet points start after the grey part */
+}
+
+.academic-advising {
+  padding-top: 20px; /* Ensure padding to start content below the grey part */
+}
+
+.academic-advising .advising-info {
+  background-color: #ffd6d6; /* Updated red color */
+  padding: 10px;
+  border-radius: 4px;
+  color: #cc0000;
+  margin-top: 20%; /* Ensures content starts below the grey part */
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px; /* Space between the icon and the text */
+}
+.icons{
+
+    width: 30px; /* Adjust the size of the icon */
+    height: 30px;
+    margin-right: 10px; /* Space between the icon and the header text */
+    vertical-align: middle; /* Align the icon with the text */
+  
+  
+}
+/* Align buttons horizontally */
+.sign-in-buttons {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 15px; /* Space between the buttons */
+  margin-top: 20px;
+}
+
+/* General button styles */
+button {
+  padding: 10px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Whitney Bold", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* Style for the Sign In button */
+.sign-in-button {
+  background-color: #333;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Style for the Sign Up button */
+.sign-up-button {
+  background-color: #007bff;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sign-in-button:hover,
+.sign-up-button:hover {
+  opacity: 0.8; /* Optional hover effect for buttons */
+}
+
+/* Adjust card style */
+.sign-in {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.sign-in h2 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+/* General button styles */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Whitney Bold", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  height: 40px; /* Ensure both buttons have the same height */
+}
+
+/* Style for the Sign In button */
+.sign-in-button {
+  background-color: #333;
+  color: white;
+}
+
+/* Style for the Sign Up button */
+.sign-up-button {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Ensure hover effect applies consistently */
+.sign-in-button:hover,
+.sign-up-button:hover {
+  opacity: 0.8;
+}
+
+/* Align buttons horizontally */
+.sign-in-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between the buttons */
+  margin-top: 20px;
+}
+/* Style for the Sign In button */
+.sign-in-button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Style for the Sign Up button */
+.sign-up-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px; /* Adds space below the Sign In button */
+}
+
+/* Align buttons horizontally */
+.sign-in-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between the buttons */
+  margin-top: 20px;
 }

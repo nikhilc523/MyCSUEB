@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .main {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+  }
+  
+  .main-logo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .checkbox-container input {
+    margin-right: 8px;
+  }
+  
+  .grid {
+    display: flex;
+    justify-content: center;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[disabled] {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .footer {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .footer p {
+    font-size: 14px;
+    color: #555;
+  }
+  

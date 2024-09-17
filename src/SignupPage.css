@@ -1,0 +1,46 @@
+.signup-page {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: white; /* Set background color to white */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.main {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.main-logo {
+    width: 100%;
+    height: auto;
+}
+
+form {
+    margin: 20px 0;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.checkbox-container {
+    margin: 10px 0;
+}
+
+.footer {
+    padding: 20px;
+    background-color: white; /* Change background color to white */
+}
+
+.cc p {
+    margin: 0;
+}
